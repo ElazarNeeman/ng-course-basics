@@ -1,14 +1,15 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-main',
   template: `
     <section class="main">
-      <input class="toggle-all"
-             type="checkbox">
-      <app-list></app-list>
+      <ng-content></ng-content>
+      <!--<input class="toggle-all"-->
+      <!--type="checkbox">-->
+      <!--<app-list></app-list>-->
     </section>
   `,
+  selector: 'app-main',
   styles: []
 })
 export class MainComponent implements OnInit {
