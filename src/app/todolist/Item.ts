@@ -9,7 +9,7 @@ export class Item {
       this._created = new Date();
     }
 
-    get created(): Date {
+  public get created(): Date {
       return this._created;
     }
 }
