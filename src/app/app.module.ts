@@ -6,6 +6,7 @@ import {TestCompComponent} from './app.test-comp.component';
 import {TodolistModule} from './todolist/todolist.module';
 
 
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -15,7 +16,6 @@ import {TodolistModule} from './todolist/todolist.module';
     BrowserModule,
     TodolistModule
   ],
-  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule {

@@ -1,5 +1,7 @@
 import {Component, OnInit} from '@angular/core';
-import {Todolist} from './todolist';
+import {TodolistService} from './todolist.service';
+
+
 
 @Component({
   selector: 'app-todolist',
@@ -17,13 +19,15 @@ import {Todolist} from './todolist';
 })
 export class TodolistComponent implements OnInit {
 
-  public list: Todolist;
+  public list: TodolistService;
+  //private logger : LoggerService;
 
   public title: string;
 
-  constructor() {
-    this.list = new Todolist();
+  constructor(list: TodolistService) {
+    this.list = list;
     this.title = 'Todos';
+    //this.logger.log('TodolistComponent log');
   }
 
   ngOnInit() {
@@ -32,7 +36,7 @@ export class TodolistComponent implements OnInit {
   public addItems(title: string) {
 
     this.list.addItems(title);
-    console.log(`added ${title}`);
+    //this.logger.log(`added ${title}`);
   }
 
 }
