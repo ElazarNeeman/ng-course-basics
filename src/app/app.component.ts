@@ -4,7 +4,8 @@ import {Component} from '@angular/core';
 @Component({
   selector: 'app-root',
   template: `
-    <h1>{{title}}</h1>
+    <input  type="checkbox" (change)="flag = !flag">
+    <h1 *appIf="flag">{{title}}</h1>
     <!--
     <input  #inputeText [placeholder]="text">
     <button (click)="changeTitle(inputeText.value)">Click me</button>
@@ -14,6 +15,7 @@ import {Component} from '@angular/core';
 })
 export class AppComponent {
 
+  public flag: boolean;
   public title: string;
   public text: string;
 
