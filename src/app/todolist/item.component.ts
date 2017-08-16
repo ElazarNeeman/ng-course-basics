@@ -3,7 +3,7 @@ import {Component, Input, OnInit} from '@angular/core';
 @Component({
   selector: 'app-item',
   template: `
-    <li [ngClass]="{ completed : item.completed }">
+    <li [ngClass]="{completed : item.completed}">
       <div class="view">
         <input class="toggle"
                [checked]="item.completed"
